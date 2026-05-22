@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Jobs - CareerPilot</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <canvas id="particles-canvas"></canvas>
+
+    <div class="app-layout">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-logo"><span class="logo-icon"></span><h2>CareerPilot</h2></div>
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="nav-item"><span class="nav-icon"></span><span>Dashboard</span></a>
+                <a href="resume.html" class="nav-item"><span class="nav-icon"></span><span>Upload Resume</span></a>
+                <a href="skills.html" class="nav-item"><span class="nav-icon"></span><span>My Skills</span></a>
+                <a href="roadmap.html" class="nav-item"><span class="nav-icon"></span><span>Career Roadmap</span></a>
+                <a href="jobs.html" class="nav-item active"><span class="nav-icon"></span><span>Find Jobs</span></a>
+                <a href="https://lokesh9912-dinoai.hf.space/" class="nav-item">
+                    <span class="nav-icon"></span>
+                    <span>JARVIS</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="sidebar-user"><div class="user-avatar" id="userAvatar">U</div><div class="user-info"><div class="user-name" id="userName">User</div><div class="user-email" id="userEmail">user@email.com</div></div></div>
+                <button class="btn btn-secondary btn-sm" style="width:100%;margin-top:10px;" onclick="logout()"> Logout</button>
+            </div>
+        </aside>
+        <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+        <main class="main-content">
+            <div class="topbar">
+                <div style="display:flex;align-items:center;gap:12px;">
+                    <button class="hamburger" onclick="toggleSidebar()">☰</button>
+                    <h1>Find Jobs & Internships</h1>
+                </div>
+            </div>
+
+            <!-- Search -->
+            <div class="glass-card" style="margin-bottom:30px;">
+                <div class="card-header">
+                    <h3>Search Jobs (Powered by Adzuna)</h3>
+                </div>
+                <div class="search-bar">
+                    <div class="search-input-wrapper" style="flex:2;">
+                        
+                        <input type="text" id="jobKeyword" placeholder="Job title, skills, or keyword...">
+                    </div>
+                    <div class="search-input-wrapper" style="flex:1;">
+                        
+                        <input type="text" id="jobLocation" placeholder="Location..." value="India">
+                    </div>
+                    <button class="btn btn-primary" onclick="searchJobs()">
+                         Search
+                    </button>
+                </div>
+                <button class="btn btn-sm btn-secondary" style="margin-top:10px;" onclick="searchBySkills()">
+                     Auto-search using my skills
+                </button>
+            </div>
+
+            <!-- Results Count -->
+            <div id="jobResultsInfo" style="display:none;margin-bottom:20px;">
+                <p style="color:var(--text-secondary);">
+                    Showing results for <strong id="searchQuery" style="color:var(--accent-tertiary);"></strong>
+                    — <span id="totalJobs"></span> jobs found
+                </p>
+            </div>
+
+            <!-- Jobs Grid -->
+            <div class="jobs-grid" id="jobsGrid">
+                <div class="empty-state glass-card" style="grid-column:1/-1;">
+                    <div class="empty-icon"></div>
+                    <h3>Search for Jobs</h3>
+                    <p>Enter a keyword or use your skills to find matching jobs and internships from Adzuna.</p>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div id="pagination" style="display:none;margin-top:30px;text-align:center;">
+                <button class="btn btn-secondary btn-sm" onclick="prevPage()" id="prevBtn" disabled>← Previous</button>
+                <span style="margin:0 15px;color:var(--text-secondary);" id="pageInfo">Page 1</span>
+                <button class="btn btn-secondary btn-sm" onclick="nextPage()" id="nextBtn">Next →</button>
+            </div>
+
+            <!-- Saved Jobs -->
+            <div class="glass-card" style="margin-top:40px;">
+                <div class="card-header">
+                    <h3> Saved Jobs</h3>
+                    <span class="badge badge-amber" id="savedCount">0</span>
+                </div>
+                <div id="savedJobsList">
+                    <div class="empty-state" style="padding:20px;">
+                        <p style="color:var(--text-muted);">No saved jobs yet. Search and save jobs you're interested in!</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="../js/common.js"></script>
+    <script src="../js/particles.js"></script>
+    <script src="../js/jobs.js"></script>
+</body>
+</html>

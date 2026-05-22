@@ -1,0 +1,290 @@
+[
+  {
+    "id": 1,
+    "career": "Web Developer",
+    "domain": "Software Development",
+    "skills": ["html", "css", "javascript", "react", "angular", "vue", "node.js", "express", "django", "rest api", "mongodb", "mysql", "git", "github", "responsive design", "bootstrap", "tailwind", "webpack", "sass", "typescript", "web development", "frontend", "backend", "full stack"],
+    "roadmap": [
+      "Learn HTML, CSS basics",
+      "Learn JavaScript fundamentals",
+      "Understand responsive design",
+      "Learn Git & GitHub",
+      "Learn frontend framework (React/Angular)",
+      "Learn backend basics (Node.js / Django)",
+      "Understand REST APIs",
+      "Work with databases (MongoDB/MySQL)",
+      "Build full-stack projects",
+      "Deploy projects (Netlify/Vercel/AWS)"
+    ]
+  },
+  {
+    "id": 2,
+    "career": "Software Developer",
+    "domain": "Software Engineering",
+    "skills": ["java", "python", "c++", "c", "oop", "data structures", "algorithms", "system design", "sql", "git", "github", "programming", "problem solving", "software engineering", "design patterns", "agile", "scrum", "debugging", "testing"],
+    "roadmap": [
+      "Learn programming (Java/Python/C++)",
+      "Master OOP concepts",
+      "Learn Data Structures & Algorithms",
+      "Understand problem solving",
+      "Learn system design basics",
+      "Work with databases",
+      "Learn version control (Git)",
+      "Build projects",
+      "Practice coding interviews",
+      "Apply for internships/jobs"
+    ]
+  },
+  {
+    "id": 3,
+    "career": "Frontend Developer",
+    "domain": "Software Development",
+    "skills": ["html", "css", "javascript", "react", "react.js", "angular", "vue", "vue.js", "typescript", "sass", "bootstrap", "tailwind", "responsive design", "webpack", "redux", "frontend", "ui", "ux", "figma", "web development"],
+    "roadmap": [
+      "Learn HTML, CSS",
+      "Learn JavaScript",
+      "Learn responsive design",
+      "Learn React.js",
+      "Understand APIs",
+      "Learn state management",
+      "Optimize performance",
+      "Build projects",
+      "Deploy portfolio",
+      "Apply for jobs"
+    ]
+  },
+  {
+    "id": 4,
+    "career": "Backend Developer",
+    "domain": "Software Development",
+    "skills": ["java", "python", "node.js", "express", "spring boot", "django", "flask", "rest api", "graphql", "mysql", "postgresql", "mongodb", "redis", "docker", "sql", "oop", "data structures", "jwt", "authentication", "backend", "microservices"],
+    "roadmap": [
+      "Learn programming (Java/Python)",
+      "Learn OOP",
+      "Learn Data Structures",
+      "Learn backend frameworks (Spring Boot/Node.js)",
+      "Work with databases (MySQL/MongoDB)",
+      "Understand REST APIs",
+      "Learn authentication (JWT)",
+      "Build projects",
+      "Learn deployment",
+      "Apply for jobs"
+    ]
+  },
+  {
+    "id": 5,
+    "career": "Full Stack Developer",
+    "domain": "Software Development",
+    "skills": ["html", "css", "javascript", "react", "angular", "node.js", "express", "spring boot", "mongodb", "mysql", "postgresql", "rest api", "git", "docker", "typescript", "redux", "full stack", "frontend", "backend", "authentication", "deployment"],
+    "roadmap": [
+      "Learn HTML, CSS, JavaScript",
+      "Learn frontend framework (React)",
+      "Learn backend (Node.js / Spring Boot)",
+      "Learn databases",
+      "Understand APIs",
+      "Build full-stack apps",
+      "Learn authentication",
+      "Deploy apps",
+      "Optimize performance",
+      "Prepare for interviews"
+    ]
+  },
+  {
+    "id": 6,
+    "career": "AI/ML Engineer",
+    "domain": "Artificial Intelligence",
+    "skills": ["python", "machine learning", "deep learning", "tensorflow", "pytorch", "keras", "scikit-learn", "pandas", "numpy", "nlp", "computer vision", "neural networks", "linear algebra", "statistics", "data science", "ai", "artificial intelligence", "opencv", "regression", "classification"],
+    "roadmap": [
+      "Learn Python",
+      "Learn linear algebra & statistics",
+      "Learn data preprocessing",
+      "Learn machine learning algorithms",
+      "Use libraries (Scikit-learn, Pandas)",
+      "Learn deep learning (TensorFlow/PyTorch)",
+      "Work on datasets",
+      "Build ML models",
+      "Deploy ML models",
+      "Apply for roles"
+    ]
+  },
+  {
+    "id": 7,
+    "career": "Data Scientist",
+    "domain": "Data",
+    "skills": ["python", "r", "statistics", "machine learning", "pandas", "numpy", "matplotlib", "seaborn", "sql", "data visualization", "data analysis", "jupyter", "scikit-learn", "tensorflow", "deep learning", "data science", "probability", "regression", "big data", "spark"],
+    "roadmap": [
+      "Learn Python",
+      "Learn statistics & probability",
+      "Learn Pandas & NumPy",
+      "Data visualization",
+      "Machine learning basics",
+      "Work on datasets",
+      "Learn SQL",
+      "Build projects",
+      "Learn advanced ML",
+      "Apply for jobs"
+    ]
+  },
+  {
+    "id": 8,
+    "career": "Data Analyst",
+    "domain": "Data",
+    "skills": ["excel", "sql", "python", "r", "power bi", "tableau", "data visualization", "data analysis", "statistics", "data cleaning", "pandas", "matplotlib", "google analytics", "reporting", "dashboard", "data"],
+    "roadmap": [
+      "Learn Excel",
+      "Learn SQL",
+      "Learn Python",
+      "Learn data visualization tools (Power BI/Tableau)",
+      "Data cleaning",
+      "Exploratory data analysis",
+      "Work on datasets",
+      "Build dashboards",
+      "Communicate insights",
+      "Apply for jobs"
+    ]
+  },
+  {
+    "id": 9,
+    "career": "DevOps Engineer",
+    "domain": "Cloud & Infrastructure",
+    "skills": ["linux", "docker", "kubernetes", "aws", "azure", "gcp", "ci/cd", "jenkins", "terraform", "ansible", "bash", "python", "git", "monitoring", "prometheus", "grafana", "networking", "devops", "shell scripting", "nginx"],
+    "roadmap": [
+      "Learn Linux basics",
+      "Learn networking basics",
+      "Learn scripting (Bash/Python)",
+      "Learn Docker",
+      "Learn Kubernetes",
+      "Learn CI/CD pipelines",
+      "Cloud platforms (AWS/Azure)",
+      "Monitoring tools",
+      "Security basics",
+      "Work on real projects"
+    ]
+  },
+  {
+    "id": 10,
+    "career": "Cloud Engineer",
+    "domain": "Cloud Computing",
+    "skills": ["aws", "azure", "gcp", "cloud computing", "docker", "kubernetes", "linux", "networking", "terraform", "serverless", "lambda", "ec2", "s3", "virtualization", "cloud", "iaas", "paas", "saas", "devops"],
+    "roadmap": [
+      "Learn networking basics",
+      "Learn Linux",
+      "Learn cloud platforms (AWS/Azure/GCP)",
+      "Understand virtualization",
+      "Learn containers (Docker)",
+      "Learn Kubernetes",
+      "Work on cloud projects",
+      "Learn security practices",
+      "Get certifications",
+      "Apply for jobs"
+    ]
+  },
+  {
+    "id": 11,
+    "career": "Cybersecurity Analyst",
+    "domain": "Security",
+    "skills": ["networking", "linux", "cybersecurity", "ethical hacking", "penetration testing", "wireshark", "metasploit", "cryptography", "firewalls", "security", "siem", "incident response", "malware analysis", "nmap", "burp suite", "kali linux", "information security"],
+    "roadmap": [
+      "Learn networking basics",
+      "Learn operating systems",
+      "Learn cybersecurity fundamentals",
+      "Learn ethical hacking",
+      "Learn tools (Wireshark, Metasploit)",
+      "Understand cryptography",
+      "Practice labs",
+      "Get certifications",
+      "Work on security projects",
+      "Apply for roles"
+    ]
+  },
+  {
+    "id": 12,
+    "career": "Mobile App Developer",
+    "domain": "Software Development",
+    "skills": ["java", "kotlin", "swift", "flutter", "dart", "react native", "android", "ios", "mobile development", "firebase", "rest api", "ui design", "xml", "sqlite", "app development"],
+    "roadmap": [
+      "Learn Java/Kotlin or Flutter",
+      "Learn mobile UI design",
+      "Understand app lifecycle",
+      "Work with APIs",
+      "Learn databases",
+      "Build apps",
+      "Test apps",
+      "Publish apps",
+      "Optimize performance",
+      "Apply for jobs"
+    ]
+  },
+  {
+    "id": 13,
+    "career": "Game Developer",
+    "domain": "Software Development",
+    "skills": ["c++", "c#", "unity", "unreal engine", "game development", "opengl", "directx", "3d modeling", "blender", "physics", "game design", "shaders", "graphics programming"],
+    "roadmap": [
+      "Learn C++/C#",
+      "Learn game engines (Unity/Unreal)",
+      "Learn graphics basics",
+      "Learn physics in games",
+      "Build small games",
+      "Learn AI in games",
+      "Optimize performance",
+      "Build portfolio",
+      "Publish games",
+      "Apply for roles"
+    ]
+  },
+  {
+    "id": 14,
+    "career": "Database Administrator",
+    "domain": "Database",
+    "skills": ["sql", "mysql", "postgresql", "oracle", "mongodb", "redis", "database", "dbms", "database design", "normalization", "indexing", "backup", "performance tuning", "data modeling", "stored procedures", "sql server"],
+    "roadmap": [
+      "Learn SQL",
+      "Understand DBMS concepts",
+      "Learn database design",
+      "Learn MySQL/PostgreSQL",
+      "Learn backup & recovery",
+      "Learn performance tuning",
+      "Learn security practices",
+      "Work on projects",
+      "Get certifications",
+      "Apply for jobs"
+    ]
+  },
+  {
+    "id": 15,
+    "career": "Systems Engineer",
+    "domain": "Core CS",
+    "skills": ["linux", "windows server", "networking", "tcp/ip", "dns", "operating systems", "virtualization", "vmware", "scripting", "bash", "powershell", "monitoring", "troubleshooting", "system administration", "servers"],
+    "roadmap": [
+      "Learn operating systems",
+      "Learn networking",
+      "Learn system architecture",
+      "Learn scripting",
+      "Learn virtualization",
+      "Work with servers",
+      "Monitor systems",
+      "Troubleshoot issues",
+      "Optimize performance",
+      "Apply for roles"
+    ]
+  },
+  {
+    "id": 16,
+    "career": "Computer Science Core Engineer",
+    "domain": "Core CS",
+    "skills": ["data structures", "algorithms", "operating systems", "computer networks", "dbms", "compiler design", "system design", "c", "c++", "java", "problem solving", "competitive programming", "oops", "oop", "computer science"],
+    "roadmap": [
+      "Learn Data Structures & Algorithms",
+      "Learn Operating Systems",
+      "Learn Database Management Systems",
+      "Learn Computer Networks",
+      "Learn Compiler Design basics",
+      "Learn System Design",
+      "Solve coding problems",
+      "Build projects",
+      "Prepare for interviews",
+      "Apply for product-based companies"
+    ]
+  }
+]

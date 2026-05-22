@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Roadmap - CareerPilot</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <canvas id="particles-canvas"></canvas>
+
+    <div class="app-layout">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-logo"><span class="logo-icon"></span><h2>CareerPilot</h2></div>
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="nav-item"><span class="nav-icon"></span><span>Dashboard</span></a>
+                <a href="resume.html" class="nav-item"><span class="nav-icon"></span><span>Upload Resume</span></a>
+                <a href="skills.html" class="nav-item"><span class="nav-icon"></span><span>My Skills</span></a>
+                <a href="roadmap.html" class="nav-item active"><span class="nav-icon"></span><span>Career Roadmap</span></a>
+                <a href="jobs.html" class="nav-item"><span class="nav-icon"></span><span>Find Jobs</span></a>
+                <a href="https://lokesh9912-dinoai.hf.space/" class="nav-item">
+                    <span class="nav-icon"></span>
+                    <span>JARVIS</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="sidebar-user"><div class="user-avatar" id="userAvatar">U</div><div class="user-info"><div class="user-name" id="userName">User</div><div class="user-email" id="userEmail">user@email.com</div></div></div>
+                <button class="btn btn-secondary btn-sm" style="width:100%;margin-top:10px;" onclick="logout()">Logout</button>
+            </div>
+        </aside>
+        <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+        <main class="main-content">
+            <div class="topbar">
+                <div style="display:flex;align-items:center;gap:12px;">
+                    <button class="hamburger" onclick="toggleSidebar()">☰</button>
+                    <h1>Career Roadmap</h1>
+                </div>
+            </div>
+
+            <!-- Career Selector -->
+            <div class="glass-card" style="margin-bottom:30px;">
+                <div class="card-header">
+                    <h3> Select Career Path</h3>
+                </div>
+                <select id="careerSelect" class="form-group" style="width:100%;padding:14px;background:var(--bg-glass);border:1px solid var(--border-glass);border-radius:var(--radius-md);color:var(--text-primary);font-size:0.95rem;font-family:inherit;">
+                    <option value="">-- Select a career --</option>
+                </select>
+                <div style="margin-top:12px;display:flex;gap:12px;">
+                    <button class="btn btn-primary" onclick="loadRoadmap()"> Load Roadmap</button>
+                    <button class="btn btn-secondary" onclick="generateNewRoadmap()">Generate New</button>
+                </div>
+            </div>
+
+            <!-- Roadmap Progress -->
+            <div class="glass-card" id="roadmapProgress" style="display:none;margin-bottom:30px;">
+                <div class="card-header">
+                    <h3> Progress</h3>
+                    <span class="badge badge-emerald" id="progressBadge">0% Complete</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="roadmapProgressFill" style="width:0%;"></div>
+                </div>
+                <p style="font-size:0.85rem;color:var(--text-secondary);margin-top:8px;" id="progressInfo">-</p>
+            </div>
+
+            <!-- Roadmap Timeline -->
+            <div class="glass-card" id="roadmapContent">
+                <div class="card-header">
+                    <h3>Your Learning Path</h3>
+                </div>
+                <div id="roadmapTimeline">
+                    <div class="empty-state">
+                        <div class="empty-icon">🗺️</div>
+                        <h3>No Roadmap Yet</h3>
+                        <p>Go to Skills Analysis page, find career matches, and generate a roadmap to see your learning path here.</p>
+                        <a href="skills.html" class="btn btn-primary" style="margin-top:10px;"> Analyze Skills</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="../js/common.js"></script>
+    <script src="../js/particles.js"></script>
+    <script src="../js/roadmap.js"></script>
+</body>
+</html>

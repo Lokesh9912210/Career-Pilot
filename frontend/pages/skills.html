@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills Analysis - CareerPilot</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <canvas id="particles-canvas"></canvas>
+
+    <div class="app-layout">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-logo"><span class="logo-icon"></span><h2>CareerPilot</h2></div>
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="nav-item"><span class="nav-icon"></span><span>Dashboard</span></a>
+                <a href="resume.html" class="nav-item"><span class="nav-icon"></span><span>Upload Resume</span></a>
+                <a href="skills.html" class="nav-item active"><span class="nav-icon"></span><span>My Skills</span></a>
+                <a href="roadmap.html" class="nav-item"><span class="nav-icon"></span><span>Career Roadmap</span></a>
+                <a href="jobs.html" class="nav-item"><span class="nav-icon"></span><span>Find Jobs</span></a>
+                <a href="https://lokesh9912-dinoai.hf.space/" class="nav-item">
+                    <span class="nav-icon"></span>
+                    <span>JARVIS</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="sidebar-user"><div class="user-avatar" id="userAvatar">U</div><div class="user-info"><div class="user-name" id="userName">User</div><div class="user-email" id="userEmail">user@email.com</div></div></div>
+                <button class="btn btn-secondary btn-sm" style="width:100%;margin-top:10px;" onclick="logout()"> Logout</button>
+            </div>
+        </aside>
+        <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+        <main class="main-content">
+            <div class="topbar">
+                <div style="display:flex;align-items:center;gap:12px;">
+                    <button class="hamburger" onclick="toggleSidebar()">☰</button>
+                    <h1>Skills & Career Analysis</h1>
+                </div>
+            </div>
+
+            <!-- My Skills (Current Resume) -->
+            <div class="glass-card" style="margin-bottom:30px;">
+                <div class="card-header">
+                    <h3> Current Resume Skills</h3>
+                    <span class="badge badge-purple" id="totalSkillBadge">0 skills</span>
+                </div>
+                <div class="skill-tags" id="mySkills">
+                    <div class="skeleton skeleton-text" style="width:80px;height:30px;display:inline-block;"></div>
+                    <div class="skeleton skeleton-text" style="width:100px;height:30px;display:inline-block;"></div>
+                    <div class="skeleton skeleton-text" style="width:70px;height:30px;display:inline-block;"></div>
+                </div>
+            </div>
+
+            <!-- Previous Resume Skills -->
+            <div class="glass-card" id="previousSkillsSection" style="margin-bottom:30px;display:none;">
+                <div class="card-header">
+                    <h3> Previous Resume Skills</h3>
+                </div>
+                <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:12px;">Skills found in your earlier resumes that are not in the current one:</p>
+                <div class="skill-tags" id="previousSkills"></div>
+            </div>
+
+            <!-- My Saved Careers -->
+            <div class="glass-card" style="margin-bottom:30px;">
+                <div class="card-header">
+                    <h3> My Saved Careers</h3>
+                </div>
+                <div id="savedCareersList">
+                    <div class="empty-state"><p>Loading saved careers...</p></div>
+                </div>
+            </div>
+
+            <!-- Search Careers -->
+            <div class="glass-card" style="margin-bottom:30px;">
+                <div class="card-header">
+                    <h3> Find Career Matches</h3>
+                </div>
+                <div class="search-bar">
+                    <div class="search-input-wrapper">
+                        <span class="search-icon"></span>
+                        <input type="text" id="careerSearch" placeholder="Search careers (e.g. Software Developer, Data Analyst)...">
+                    </div>
+                    <button class="btn btn-primary" onclick="searchCareers()">
+                         Search Careers
+                    </button>
+                </div>
+                <p style="font-size:0.85rem;color:var(--text-muted);">Leave empty to auto-search based on your skills</p>
+            </div>
+
+            <!-- Career Results -->
+            <div id="careerResults" style="display:none;">
+                <h3 style="margin-bottom:20px;"> Career Matches</h3>
+                <div id="careersList" class="stats-grid"></div>
+            </div>
+
+            <!-- Skill Gap Analysis -->
+            <div class="glass-card" id="skillGapSection" style="display:none;margin-top:30px;">
+                <div class="card-header">
+                    <h3> Skill Gap Analysis</h3>
+                    <span class="badge badge-cyan" id="gapCareerTitle">-</span>
+                </div>
+
+                <div class="stats-grid" style="margin-bottom:20px;">
+                    <div style="text-align:center;padding:20px;">
+                        <div style="font-size:2rem;font-weight:800;color:var(--accent-emerald);" id="gapHasCount">0</div>
+                        <div style="font-size:0.85rem;color:var(--text-secondary);">Skills You Have</div>
+                    </div>
+                    <div style="text-align:center;padding:20px;">
+                        <div style="font-size:2rem;font-weight:800;color:var(--accent-rose);" id="gapMissCount">0</div>
+                        <div style="font-size:0.85rem;color:var(--text-secondary);">Skills to Learn</div>
+                    </div>
+                    <div style="text-align:center;padding:20px;">
+                        <div style="font-size:2rem;font-weight:800;color:var(--accent-primary);" id="gapMatchPercent">0%</div>
+                        <div style="font-size:0.85rem;color:var(--text-secondary);">Match Score</div>
+                    </div>
+                </div>
+
+                <h4 style="margin-bottom:10px;color:var(--accent-emerald);">✅ Skills You Have</h4>
+                <div class="skill-tags" id="gapHasSkills" style="margin-bottom:20px;"></div>
+
+                <h4 style="margin-bottom:10px;color:var(--accent-rose);">❌ Skills You Need to Learn</h4>
+                <div class="skill-tags" id="gapMissSkills" style="margin-bottom:20px;"></div>
+
+                <button class="btn btn-primary" onclick="generateRoadmap()" id="generateRoadmapBtn">
+                    🗺️ Generate Learning Roadmap
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="../js/common.js"></script>
+    <script src="../js/particles.js"></script>
+    <script src="../js/skills.js"></script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - CareerPilot</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <canvas id="particles-canvas">HELLO User</canvas>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader-text"></div>
+    </div>
+
+    <div class="app-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-logo">
+                <h2>CareerPilot</h2>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="nav-item active">
+                    <span class="nav-icon"></span>
+                    <span>Dashboard</span>
+                </a>
+                <a href="resume.html" class="nav-item">
+                    <span class="nav-icon"></span>
+                    <span>Upload Resume</span>
+                </a>
+                <a href="skills.html" class="nav-item">
+                    <span class="nav-icon"></span>
+                    <span>My Skills</span>
+                </a>
+                <a href="roadmap.html" class="nav-item">
+                    <span class="nav-icon"></span>
+                    <span>Career Roadmap</span>
+                </a>
+                <a href="jobs.html" class="nav-item">
+                    <span class="nav-icon"></span>
+                    <span>Find Jobs</span>
+                </a>
+                <a href="https://lokesh9912-dinoai.hf.space/" class="nav-item">
+                    <span class="nav-icon"></span>
+                    <span>JARVIS</span>
+                </a>
+
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="sidebar-user" id="sidebarUser">
+                    <div class="user-avatar" id="userAvatar"></div>
+                    <div class="user-info">
+                        <div class="user-name" id="userName">User</div>
+                        <div class="user-email" id="userEmail">user@email.com</div>
+                    </div>
+                </div>
+                <button class="btn btn-secondary btn-sm" style="width:100%;margin-top:10px;" onclick="logout()">
+                    Logout
+                </button>
+            </div>
+        </aside>
+
+        <!-- Sidebar Overlay -->
+        <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <div class="topbar">
+                <div style="display:flex;align-items:center;gap:12px;">
+                    <button class="hamburger" onclick="toggleSidebar()">☰</button>
+                    <h1>Dashboard</h1>
+                </div>
+               
+            </div>
+
+            <!-- Stats Grid -->
+            <div class="stats-grid" id="statsGrid">
+                <div class="glass-card stat-card">
+                    <div class="stat-value" id="statResumeScore">--</div>
+                    <div class="stat-label">Resume Score</div>
+                </div>
+                <div class="glass-card stat-card">
+                    <div class="stat-value" id="statSkillCount">--</div>
+                    <div class="stat-label">Skills Found</div>
+                </div>
+                <div class="glass-card stat-card">
+                    <div class="stat-value" id="statCareers">--</div>
+                    <div class="stat-label">Career Matches</div>
+                </div>
+                <div class="glass-card stat-card">
+                    <div class="stat-value" id="statSavedJobs">--</div>
+                    <div class="stat-label">Saved Jobs</div>
+                </div>
+            </div>
+
+            <!-- Dashboard Grid -->
+            <div class="dashboard-grid">
+                <!-- Resume Score -->
+                <div class="glass-card">
+                    <div class="card-header">
+                        <h3>📊 Resume Score</h3>
+                        <a href="resume.html" class="btn btn-sm btn-secondary">Upload New</a>
+                    </div>
+                    <div class="score-container">
+                        <div class="score-circle">
+                            <svg viewBox="0 0 200 200">
+                                <defs>
+                                    <linearGradient id="scoreGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                        <stop offset="0%" stop-color="#6366f1" />
+                                        <stop offset="100%" stop-color="#06b6d4" />
+                                    </linearGradient>
+                                </defs>
+                                <circle class="bg-circle" cx="100" cy="100" r="90" />
+                                <circle class="progress-circle" id="scoreCircle" cx="100" cy="100" r="90" />
+                            </svg>
+                            <div class="score-value">
+                                <div class="number" id="scoreNumber">0</div>
+                                <div class="label">Resume Score</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="glass-card">
+                    <div class="card-header">
+                        <h3> Quick Actions</h3>
+                    </div>
+                    <div style="display:flex;flex-direction:column;gap:12px;">
+                        <a href="resume.html" class="btn btn-primary" style="text-align:center;">
+                             Upload Resume
+                        </a>
+                        <a href="roadmap.html" class="btn btn-secondary" style="text-align:center;">
+                             View Roadmap
+                        </a>
+                        <a href="skills.html" class="btn btn-secondary" style="text-align:center;">
+                             Skill Analysis
+                        </a>
+                        <a href="jobs.html" class="btn btn-secondary" style="text-align:center;">
+                             Find Jobs
+                        </a>
+                         <a href="https://lokesh9912-dinoai.hf.space/" class="btn btn-secondary" style="text-align:center;">
+                             JARVIS
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills Overview -->
+            <div class="glass-card" style="margin-bottom:30px;">
+                <div class="card-header">
+                    <h3> My Skills</h3>
+                    <a href="skills.html" class="btn btn-sm btn-secondary">View All</a>
+                </div>
+                <div class="skill-tags" id="dashboardSkills">
+                    <span class="skill-tag neutral">Upload resume to see skills</span>
+                </div>
+            </div>
+
+            <!-- Recent Careers -->
+            <div class="glass-card">
+                <div class="card-header">
+                    <h3> Career Matches</h3>
+                    <a href="roadmap.html" class="btn btn-sm btn-secondary">View All</a>
+                </div>
+                <div id="dashboardCareers">
+                    <div class="empty-state" style="padding:30px;">
+                        <p style="color:var(--text-muted);">Upload resume & analyze skills to see career matches</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="../js/common.js"></script>
+    <script src="../js/particles.js"></script>
+    <script src="../js/dashboard.js"></script>
+</body>
+</html>
