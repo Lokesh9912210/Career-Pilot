@@ -1,17 +1,13 @@
-# 🚀 CareerPilot — AI Career Roadmap Platform
+CareerPilot — AI Career Roadmap Platform
 
 CareerPilot is a full-stack web application that helps you navigate your career journey. Upload your resume, discover your skills, get a personalized career roadmap, and find jobs that match your potential.
 
-## ✨ Features
 
-- **📄 Smart Resume Analysis** — Upload a PDF resume, extract skills via AI keyword matching, and get a resume score out of 100
-- **🎯 Skills & Career Matching** — Compare your skills against O*NET career profiles and see your match percentage
-- **🗺️ Career Roadmap** — Generate a step-by-step learning roadmap with target dates for each missing skill
-- **💼 Job Search** — Search real jobs and internships from Adzuna based on your skills or keywords
-- **🤖 Telegram Integration** — Connect with a Telegram bot via Make.com for instant notifications
-- **📧 Email Notifications** — Receive analysis results and roadmap updates via email
+Smart Resume Analysis** — Upload a PDF resume, extract skills via AI keyword matching, and get a resume score out of 100
+Skills & Career Matching** — Compare your skills against O*NET career profiles and see your match percentage
+Career Roadmap** — Generate a step-by-step learning roadmap with target dates for each missing skill
+Job Search** — Search real jobs and internships from Adzuna based on your skills or keywords
 
-## 🛠️ Tech Stack
 
 | Layer | Technology |
 |-------|-----------|
@@ -23,7 +19,6 @@ CareerPilot is a full-stack web application that helps you navigate your career 
 | **External APIs** | O*NET, Adzuna, Make.com |
 | **Email** | Nodemailer (Gmail SMTP) |
 
-## 📋 Prerequisites
 
 - [Node.js](https://nodejs.org/) (v16+)
 - [MySQL](https://www.mysql.com/) (v8+)
@@ -32,18 +27,14 @@ CareerPilot is a full-stack web application that helps you navigate your career 
   - [Adzuna Developer](https://developer.adzuna.com) — job listings
   - [Make.com](https://www.make.com) — Telegram bot integration
   - Gmail App Password — email notifications
-
-## 🚀 Getting Started
-
-### 1. Clone & Install
+ 1. Clone & Install
 
 ```bash
 git clone <your-repo-url>
 cd CareerPilot/backend
 npm install
 ```
-
-### 2. Set Up Database
+ 2. Set Up Database
 
 ```bash
 mysql -u root -p < schema.sql
@@ -77,8 +68,6 @@ npm start       # Production
 ```
 
 Open **http://localhost:5000** in your browser.
-
-## 📁 Project Structure
 
 ```
 CareerPilot/
@@ -124,6 +113,6 @@ CareerPilot/
 └── README.md
 ```
 
-## 📝 License
+ License
 
 ISC
